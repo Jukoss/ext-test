@@ -1,0 +1,14 @@
+{
+
+    "name": "Test extensions",
+    "description": "Test extensions",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+    ]
+}
