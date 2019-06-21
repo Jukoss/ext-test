@@ -1,14 +1,24 @@
 {
-
-    "name": "Test extensions",
-    "description": "Test extensions",
-    "version": "1.0",
-    "browser_action": {
-        "default_icon": "logo.png",
-        "default_popup": "popup.html"
-    },
     "manifest_version": 2,
-    "permissions": [
-        "activeTab"
-    ]
+    "name": "My Cool Extension",
+    "version": "0.1",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "logo.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
 }

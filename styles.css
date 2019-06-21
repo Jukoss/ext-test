@@ -1,8 +1,16 @@
+html {
+  width: 300px;
+  height: 300px;
+}
 body {
-  background-color: #ccc;
-  border: none;
+  background-color: #fff;
 }
 
 h1 {
   color: red;
 }
+
+.container {
+  padding: 15px;
+}
+
