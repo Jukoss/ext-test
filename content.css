@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.sidebar {
+  width: 256px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+}
+
+.m-portlet__head-text {
+  font-family: sans-serif !important;
+}
+.m-portlet {
+  height: 100%;;
+}
+.m-portlet__body {
+  height: calc(100% - 5.1rem);
+}
