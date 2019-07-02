@@ -1,4 +1,5 @@
 
+window.onload = function() {
 const body = document.body;
 
 const sidebar = document.createElement("div");
@@ -31,7 +32,34 @@ mPortletHeadText.classList.add('m-portlet__head-text');
 mPortletHeadText.innerHTML = 'Search request';
 mPortletHeadTitle.append(mPortletHeadText);
 
+// console.log(document.querySelectorAll('.gLFyf')[0].value);
+
+const requests = JSON.parse(localStorage.getItem('requests')) || [];
+
+console.log('requests', requests);
+
+// window.location.href
+
+requests.map((request) => {
+  const a = document.querySelectorAll(`[href="${request}"]`)[0];
+  a.style.backgroundColor = 'yellow';
+  console.log(a);
+})
 
 
+
+const anchors = document.querySelectorAll('.r a');
+  for(let i = 0; i < anchors.length; i++) {
+      const anchor = anchors[i];
+      anchor.onclick = function(e) {
+        e.preventDefault();
+        const request = this.getAttribute('href'); 
+        requests.push(request);
+        console.log('requests', requests);
+        localStorage.setItem('requests', JSON.stringify(requests));
+      }
+  }
 
 body.append(sidebar);
+
+}
